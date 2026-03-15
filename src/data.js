@@ -48,7 +48,7 @@ export const DATA = {
       id: "exp2",
       role: "Samsung Innovation Campus",
       company: "Samsung",
-      date: "Oct 2023 – Jan 2024",
+      date: "Dec 2024 – Mar 2025",
       description: [
         "Developed a real-time smart parking system by integrating multiple IoT communication protocols to continuously monitor and report vehicle occupancy status.",
         "Engineered an automated billing mechanism that detects the physical presence of a parked car and instantly triggers fee calculation for seamless time-tracking."
@@ -76,7 +76,11 @@ export const DATA = {
       date: "Nov 2025 – Present",
       description: [
         "Engineered and integrated a comprehensive powertrain layout for an off-road racing vehicle, optimizing the power transmission between the engine, continuously variable transmission (CVT), and differential to achieve a top speed of 60 km/h and a maximum gradeability of 35 degrees.",
-        "Leading the integration of the engine, transmission, and custom differential, currently coordinating manufacturing and assembly to achieve a targeted weight reduction of 10% while maintaining a minimum safety factor of 1.8."
+        "Leading the integration of the engine, transmission, and custom differential, currently coordinating manufacturing and assembly to achieve a targeted weight reduction of 10% while maintaining a minimum safety factor of 1.8.",
+        "Conducted static structural and fatigue Finite Element Analysis (FEA) on powertrain mounts and the differential casing using ANSYS, validating the 1.8 safety factor.",
+        "Performed fatigue and contact stress analysis on custom differential gears using ANSYS to prevent tooth bending and pitting failures under high-torque off-road conditions.",
+        "Conducted torsional and bending FEA on the main powertrain shafts in ANSYS to determine critical speeds and ensure continuous power delivery from the CVT to the wheels.",
+        "Executed front-impact and torsional rigidity FEA on the tubular chassis using ANSYS to ensure driver safety and dynamic stability, directly informing the material selection process."
       ],
       tags: ["Powertrain", "CVT", "Manufacturing"],
       images: [
