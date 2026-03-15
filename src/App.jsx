@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { DATA } from './data';
-import { Sun, Moon, Linkedin, Github, Mail, X } from 'lucide-react';
+import { Sun, Moon, Linkedin, Github, Mail, X, Phone, ExternalLink } from 'lucide-react';
+
+function DescriptionWithReadMore({ description, maxItems = 2 }) {
+  const [expanded, setExpanded] = useState(false);
+  const needsTruncation = description.length > maxItems;
+  const visibleItems = expanded ? description : description.slice(0, maxItems);
+  return (
+    <div className="description">
+      <ul>
+        {visibleItems.map((desc, i) => <li key={i}>{desc}</li>)}
+      </ul>
+      {needsTruncation && (
+        <button className="read-more-toggle" onClick={e => { e.stopPropagation(); setExpanded(!expanded); }}>
+          {expanded ? 'Show less ▴' : 'Read more ▾'}
+        </button>
+      )}
+    </div>
+  );
+}
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -68,6 +86,14 @@ function App() {
             <a href={`mailto:${DATA.personal.email}`} title="Email">
               <Mail size={18} />
             </a>
+            <a href={`tel:+91${DATA.personal.phone}`} title="Phone">
+              <Phone size={18} />
+            </a>
+          </div>
+
+          <div className="phone-display">
+            <Phone size={13} />
+            <a href={`tel:+91${DATA.personal.phone}`}>+91 {DATA.personal.phone}</a>
           </div>
 
           <div className="skills-summary">
@@ -106,15 +132,16 @@ function App() {
                   </div>
                   <span className="role">{exp.company}</span>
                   {exp.location && <span className="location">{exp.location}</span>}
-                  <div className="description">
-                    <ul>
-                      {exp.description.map((desc, i) => <li key={i}>{desc}</li>)}
-                    </ul>
-                  </div>
+                  <DescriptionWithReadMore description={exp.description} />
                   {exp.tags && (
                     <div className="tags">
                       {exp.tags.map(tag => <span key={tag}>{tag}</span>)}
                     </div>
+                  )}
+                  {exp.certificateUrl && (
+                    <a href={exp.certificateUrl} className="cert-link" target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>
+                      <ExternalLink size={12} /> View Certificate
+                    </a>
                   )}
                 </div>
               </div>
@@ -131,11 +158,7 @@ function App() {
                     <span className="title">{proj.title}</span>
                     <span className="date auto-margin">{proj.date}</span>
                   </div>
-                  <div className="description">
-                    <ul>
-                      {proj.description.map((desc, i) => <li key={i}>{desc}</li>)}
-                    </ul>
-                  </div>
+                  <DescriptionWithReadMore description={proj.description} />
                   {proj.tags && (
                     <div className="tags">
                       {proj.tags.map(tag => <span key={tag}>{tag}</span>)}

@@ -42,7 +42,8 @@ export const DATA = {
         "Designed and deployed Grafana dashboards for real-time monitoring of energy consumption and device health, improving visibility by 45%.",
         "Implemented MQTT and InfluxDB-based data pipelines for scalable, low-latency sensor data logging."
       ],
-      tags: ["Grafana", "MQTT", "InfluxDB", "IoT"]
+      tags: ["Grafana", "MQTT", "InfluxDB", "IoT"],
+      certificateUrl: "#"
     },
     {
       id: "exp2",
@@ -53,7 +54,8 @@ export const DATA = {
         "Developed a real-time smart parking system by integrating multiple IoT communication protocols to continuously monitor and report vehicle occupancy status.",
         "Engineered an automated billing mechanism that detects the physical presence of a parked car and instantly triggers fee calculation for seamless time-tracking."
       ],
-      tags: ["IoT", "Automation", "Sensors"]
+      tags: ["IoT", "Automation", "Sensors"],
+      certificateUrl: "#"
     },
     {
       id: "exp3",
@@ -66,7 +68,8 @@ export const DATA = {
         "Applied DEMATEL and MCDM techniques to prioritize critical supply chain risk factors and decision criteria.",
         "Identified barriers to adoption of IoT, AI, Blockchain, and Cloud technologies and proposed Industry 4.0 integration strategies."
       ],
-      tags: ["MCDM", "DEMATEL", "Industry 4.0", "Research"]
+      tags: ["MCDM", "DEMATEL", "Industry 4.0", "Research"],
+      certificateUrl: "#"
     }
   ],
   projects: [
