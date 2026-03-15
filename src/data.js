@@ -6,7 +6,7 @@ export const DATA = {
     email: "mishraharshit664@gmail.com",
     phone: "9919363713",
     linkedin: "linkedin.com/in/harshit-mishra-35a8b7176/",
-    linkedinUrl: "https://www.linkedin.com/in/harshit-mishra-35a8b7176/",
+    linkedinUrl: "https://www.linkedin.com/in/harshit-kumar-mishra-35a8b7176",
   },
   skills: {
     "CAD/CAE": "SolidWorks, Fusion 360, Siemens NX, CATIA, ANSYS, CREO",
