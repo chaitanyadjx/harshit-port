@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { DATA } from './data';
-import { Sun, Moon, Linkedin, Github, Mail, Download } from 'lucide-react';
+import { Sun, Moon, Linkedin, Github, Mail, X } from 'lucide-react';
 
 function App() {
   const [theme, setTheme] = useState('dark');
   const [activeTab, setActiveTab] = useState('Experience');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -120,7 +121,11 @@ function App() {
             ))}
 
             {activeTab === 'Projects' && DATA.projects.map(proj => (
-              <div key={proj.id} className="project-card">
+              <div 
+                key={proj.id} 
+                className="project-card clickable-card"
+                onClick={() => setSelectedProject(proj)}
+              >
                 <div className="card-left">
                   <div className="card-header">
                     <span className="title">{proj.title}</span>
@@ -183,6 +188,41 @@ function App() {
           </div>
         </div>
       </main>
+
+      {/* Project Modal Overlay */}
+      {selectedProject && (
+        <div className="modal-backdrop" onClick={() => setSelectedProject(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedProject(null)}>
+              <X size={18} />
+            </button>
+            <div className="card-header">
+              <span className="title">{selectedProject.title}</span>
+              <span className="date auto-margin">{selectedProject.date}</span>
+            </div>
+            
+            <div className="description">
+              <ul>
+                {selectedProject.description.map((desc, i) => <li key={i}>{desc}</li>)}
+              </ul>
+            </div>
+            
+            {selectedProject.tags && (
+              <div className="tags">
+                {selectedProject.tags.map(tag => <span key={tag}>{tag}</span>)}
+              </div>
+            )}
+            
+            {selectedProject.images && selectedProject.images.length > 0 && (
+              <div className="modal-images">
+                {selectedProject.images.map((img, index) => (
+                  <img key={index} src={img} alt={`${selectedProject.title} screenshot ${index + 1}`} loading="lazy" />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -78,7 +78,11 @@ export const DATA = {
         "Engineered and integrated a comprehensive powertrain layout for an off-road racing vehicle, optimizing the power transmission between the engine, continuously variable transmission (CVT), and differential to achieve a top speed of 60 km/h and a maximum gradeability of 35 degrees.",
         "Leading the integration of the engine, transmission, and custom differential, currently coordinating manufacturing and assembly to achieve a targeted weight reduction of 10% while maintaining a minimum safety factor of 1.8."
       ],
-      tags: ["Powertrain", "CVT", "Manufacturing"]
+      tags: ["Powertrain", "CVT", "Manufacturing"],
+      images: [
+        "https://images.unsplash.com/photo-1594953934509-c124ceece58d?q=80&w=600",
+        "https://images.unsplash.com/photo-1510425463958-dcced28ad4d1?q=80&w=600"
+      ]
     },
     {
       id: "proj2",
@@ -89,7 +93,11 @@ export const DATA = {
         "Optimized material selection to balance strength, weight, and cost, reducing overall build cost by 10%.",
         "Coordinated manufacturing, assembly, and testing with a 5–7 member team."
       ],
-      tags: ["Motorsport", "Fabrication", "Team Leadership"]
+      tags: ["Motorsport", "Fabrication", "Team Leadership"],
+      images: [
+        "https://images.unsplash.com/photo-1582239634282-eeb66bde2a22?q=80&w=600",
+        "https://images.unsplash.com/photo-1590333746438-283fd2295628?q=80&w=600"
+      ]
     },
     {
       id: "proj3",
@@ -98,7 +106,10 @@ export const DATA = {
       description: [
         "Designed and fabricated a modular mechanical architecture for a kinetic LED lamp emphasizing robustness and ease of assembly and integrated housings for sensors, actuators, and power electronics."
       ],
-      tags: ["Modular Architecture", "Actuators", "Sensors"]
+      tags: ["Modular Architecture", "Actuators", "Sensors"],
+      images: [
+        "https://images.unsplash.com/photo-1516087593924-4ba14868de9a?q=80&w=600"
+      ]
     },
     {
       id: "proj4",
@@ -108,7 +119,11 @@ export const DATA = {
         "Designed and fabricated a custom fixed-wing aerostructure, selecting lightweight materials to optimize aerodynamic efficiency and maintain structural integrity during flight.",
         "Configured and integrated the onboard flight controller, propulsion system, and radio receiver to ensure stable flight dynamics and responsive handling across different flight modes."
       ],
-      tags: ["Aerostructure", "Flight Controller", "UAS"]
+      tags: ["Aerostructure", "Flight Controller", "UAS"],
+      images: [
+        "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=600",
+        "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=600"
+      ]
     },
     {
       id: "proj5",
@@ -118,7 +133,11 @@ export const DATA = {
         "Developed a complete 3D CAD model of a rover emphasizing lightweight structure and terrain adaptability.",
         "Performed stress and load simulations, improving durability estimates by 20%."
       ],
-      tags: ["Fusion 360", "FEA", "Robotics"]
+      tags: ["Fusion 360", "FEA", "Robotics"],
+      images: [
+        "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=600",
+        "https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=600"
+      ]
     }
   ],
   leadership: [

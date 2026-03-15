@@ -191,3 +191,79 @@ html:not(.dark) .moon-icon { display: block; }
   .card-right { display: none; }
   .tabs { flex-wrap: wrap; gap: 15px; }
 }
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: var(--container-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.4s var(--ease) forwards;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer; transition: 0.2s;
+  z-index: 2;
+}
+.modal-close:hover {
+  background: var(--text-primary);
+  color: var(--container-bg);
+  border-color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.modal-content .card-header { margin-bottom: 1.5rem; padding-right: 2rem; }
+.modal-content .title { font-size: 1.7rem; }
+.modal-content .description { font-size: 14.5px; line-height: 1.7; margin-bottom: 2rem; }
+.modal-content .tags { margin-bottom: 2rem; }
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.modal-images img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  opacity: 0.85;
+  transition: 0.3s var(--ease);
+}
+.modal-images img:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.clickable-card {
+  cursor: pointer;
+}
