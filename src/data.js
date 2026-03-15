@@ -1,7 +1,7 @@
 export const DATA = {
   personal: {
     name: "Harshit Kumar Mishra",
-    tagline: "Mechanical Engineer & UAS Specialist 🛸",
+    tagline: "Mechanical Engineer & UAS Specialist ",
     bio: "Mechanical Engineering student at **IIITDM Kurnool** with a minor in **Unmanned Aerial Systems**. I focus on bridging structural efficiency with **Industry 4.0** digital transformation.",
     email: "mishraharshit664@gmail.com",
     phone: "9919363713",
