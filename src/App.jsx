@@ -73,7 +73,7 @@ function App() {
 
           <div className="action-btns">
             <a href={`mailto:${DATA.personal.email}`} className="btn btn-filled">Get in touch</a>
-            <a href="#" className="btn btn-outline" download>Resume PDF</a>
+            <a href="https://drive.google.com/file/d/1xWGAlGkef_1km3eX-7T1NAHg3Yc5I4IE/view?usp=sharing" className="btn btn-outline" download>Resume PDF</a>
           </div>
 
           <div className="social-icons">
