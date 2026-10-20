@@ -329,3 +329,144 @@ html:not(.dark) .moon-icon { display: block; }
   color: var(--text-primary);
 }
 
+/* Category Filter Pills */
+.project-category-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.category-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.category-pill:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.category-pill.active {
+  background: var(--text-primary);
+  color: var(--bg);
+  border-color: var(--text-primary);
+}
+
+.category-pill-count {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Category Badge in Card */
+.title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-badge {
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+html:not(.dark) .category-badge {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+/* Card Source Hint */
+.card-source-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 6px;
+  background: var(--tag-bg);
+  border: 1px dashed var(--border);
+  padding: 5px 9px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.card-footer-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.view-details-prompt {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.2s var(--ease);
+}
+
+.project-card:hover .view-details-prompt {
+  color: var(--text-primary);
+  transform: translateX(2px);
+}
+
+/* Modal Source Deliverables */
+.modal-section-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.modal-sources {
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.3rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.source-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--text-primary);
+}
+
